@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p>Enter the number and Click OK!</p>
+    <input id="a" type="number" min="4" max="200" required></input>
+    <button onclick="myfunction()">click</button>
+    <p id="b"></p>
+    <script>
+    function myfunction(){
+        var i=document.getElementById("a")
+        if(!i.checkValidity()){
+            document.getElementById("b").innerHTML=i.validationMessage
+        }
+        else{
+            document.getElementById("b").innerHTML="INPUT IS OK"
+        }
+    }
+    </script>
+</body>
+</html>
